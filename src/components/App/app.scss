@@ -1,0 +1,25 @@
+@import-normalize;
+@import './variables.scss';
+
+body {
+    font: 14px $font-stack;
+    color: $primary-color;
+}
+
+hr {
+    background-color: transparent;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #e2e1e1
+}
+
+button {
+    padding: 6px 8px;
+    cursor: pointer;
+}
+
+.buttons-set {
+    button:not(:first-child) {
+        margin-left: 5px
+    }
+}

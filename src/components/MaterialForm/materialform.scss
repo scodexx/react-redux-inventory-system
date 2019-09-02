@@ -1,0 +1,22 @@
+.material__form {
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+    .inner {
+        width: 400px;
+    }
+
+    input,
+    select {
+        display: block;
+        width: 100%;
+        border: 1px solid #e2e1e1;
+        margin-top: 5px;
+        padding: 6px 8px
+    }
+
+    select{
+        appearance: none;
+        padding: 8px
+    }
+}

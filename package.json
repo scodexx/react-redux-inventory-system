@@ -1,0 +1,107 @@
+{
+  "name": "inventory-system",
+  "description": "A React/Redux inventory management system",
+  "keywords": [
+    "react",
+    "redux",
+    "inventory",
+    "system"
+  ],
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=11.7.0",
+    "npm": ">=6.10.1"
+  },
+  "author": {
+    "name": "Seyi Ajonibode",
+    "email": "seyi@mattheson.co"
+  },
+  "dependencies": {
+    "moment": "2.24.0",
+    "node-sass": "4.12.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "7.1.1",
+    "react-scripts": "3.1.1",
+    "redux": "4.0.4",
+    "redux-thunk": "2.3.0"
+  },
+  "devDependencies": {
+    "@babel/register": "7.5.5",
+    "babel-polyfill": "^6.26.0",
+    "chai": "4.2.0",
+    "deep-freeze": "0.0.1",
+    "enzyme": "3.10.0",
+    "enzyme-adapter-react-16": "1.14.0",
+    "mocha": "6.2.0",
+    "nyc": "14.1.1",
+    "postcss-normalize": "8.0.1",
+    "redux-devtools": "3.5.0",
+    "redux-devtools-dock-monitor": "1.1.3",
+    "redux-devtools-log-monitor": "1.4.0",
+    "redux-logger": "3.0.6",
+    "redux-mock-store": "1.5.3",
+    "sinon": "7.4.2",
+    "snyk": "1.205.0",
+    "stylelint": "10.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:snyk": "snyk test",
+    "test:nyc": "nyc mocha \"./src/**/*.test.js\"",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "coverage:check": "nyc check-coverage",
+    "coverage:report": "nyc report --reporter=lcov --reporter=text",
+    "lint": "eslint --ignore-path .eslintignore 'src/**/*.js'",
+    "lint:scss": "stylelint src/**/*.scss",
+    "eject": "react-scripts eject"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run lint && npm run coverage:check && npm run build"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "nyc": {
+    "branches": 50,
+    "lines": 50,
+    "functions": 50,
+    "statements": 50,
+    "require": [
+      "babel-polyfill",
+      "@babel/register"
+    ],
+    "extensions": [
+      ".js"
+    ],
+    "exclude": [
+      "coverage/**",
+      "mode_modules/**",
+      "build/**",
+      ".nyc_output/**"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "sourceMap": false,
+    "cache": false
+  }
+}

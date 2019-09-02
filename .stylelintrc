@@ -1,0 +1,11 @@
+{
+    "rules": {
+        "indentation": 4,
+        "color-hex-case": "lower",
+		"color-no-invalid-hex": true,
+
+        "unit-whitelist": [ "px", "%", "deg", "ms", "em", "vh", "vw", "rem", "s" ],
+
+        "property-case": "lower",
+    }
+}

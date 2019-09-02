@@ -1,0 +1,23 @@
+.materials__table {
+    width: 100%;
+    margin-top: 15px;
+
+    th {
+        border-top: 1px solid #e2e1e1;
+        border-bottom: 1px solid #e2e1e1;
+        padding: 15px 0 15px;
+        text-align: left;
+    }
+
+    th:not(:first-child) {
+        padding-left: 5px;
+    }
+
+    td {
+        padding: 15px 0;
+    }
+
+    td:not(:first-child) {
+        padding-left: 5px;
+    }
+}
